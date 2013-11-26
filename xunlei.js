@@ -21,8 +21,8 @@ function test(){
 
 function add(link){
   var output = {};
-  // output = execSync(commmands.add + '"' + link + '"', true);
-  console.log(link)
+  output = execSync(commmands.add + '"' + link + '"', true);
+  // console.log(link)
   if (output.stderr){
     logger.log("error","Add xunlei-lixian task failed.\ninfo:","Error Message: " + output.stderr);
     return false;
