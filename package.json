@@ -23,16 +23,16 @@
     "feedparser": "~0.16.3",
     "request": "~2.27.0",
     "clone": "~0.1.11",
-    "exec-sync": "~0.1.6",
-    "winston": "~0.7.2"
+    "winston": "~0.7.2",
+    "execSync": "~1.0.1-pre"
   },
   "devDependencies": {
     "nconf": "~0.6.8",
     "feedparser": "~0.16.3",
     "request": "~2.27.0",
     "clone": "~0.1.11",
-    "exec-sync": "~0.1.6",
     "winston": "~0.7.2",
-    "cron": "~1.0.1"
+    "cron": "~1.0.1",
+    "execSync": "~1.0.1-pre"
   }
 }
