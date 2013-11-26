@@ -1,0 +1,38 @@
+{
+  "name": "anime-subscriber",
+  "version": "0.0.1",
+  "description": "add your subscribed anime to xunlei-cloud automatically",
+  "main": "cron.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/hyspace/anime-subscriber.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "anime",
+    "xunlei",
+    "lixian",
+    "auto"
+  ],
+  "author": "hyspace",
+  "license": "MIT",
+  "dependencies": {
+    "nconf": "~0.6.8",
+    "feedparser": "~0.16.3",
+    "request": "~2.27.0",
+    "clone": "~0.1.11",
+    "exec-sync": "~0.1.6",
+    "winston": "~0.7.2"
+  },
+  "devDependencies": {
+    "nconf": "~0.6.8",
+    "feedparser": "~0.16.3",
+    "request": "~2.27.0",
+    "clone": "~0.1.11",
+    "exec-sync": "~0.1.6",
+    "winston": "~0.7.2",
+    "cron": "~1.0.1"
+  }
+}
