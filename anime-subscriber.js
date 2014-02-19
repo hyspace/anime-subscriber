@@ -48,9 +48,14 @@ module.exports.run = function(){
             })
             if(newer){
               logger.log('info','New! - ' + title);
-              xunlei.add(rssItem.enclosures[0].url)
-              config.updateItem(itemIndex,episode);
-              list = config.getList();
+              var promise = xunlei.add(rssItem.enclosures[0].url)
+              promise.then(function(json){
+                logger.log("info","Successfully added xunlei-lixian task: " + json.tasks[0].name);
+                config.updateItem(itemIndex,episode);
+                list = config.getList();
+              }, function(err){
+                logger.log("error","Add xunlei-lixian task failed.\ninfo:","Error Message: " + err.stdout);
+              })
             }
           }
         })
