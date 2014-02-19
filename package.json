@@ -1,6 +1,6 @@
 {
   "name": "anime-subscriber",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "add your subscribed anime to xunlei-cloud automatically",
   "repository": {
     "type": "git",
@@ -23,7 +23,6 @@
     "feedparser": "~0.16.3",
     "request": "~2.27.0",
     "clone": "~0.1.11",
-    "winston": "~0.7.2",
     "lixian-cli":"~0.1.3"
   }
 }

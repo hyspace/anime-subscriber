@@ -1,7 +1,6 @@
 var fs = require('fs')
   , nconf = require('nconf')
   , clone = require('clone')
-  , logger = require('./log');
 
 nconf.use('file', { file: 'config.json' });
 nconf.load();

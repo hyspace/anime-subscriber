@@ -2,7 +2,6 @@ var FeedParser = require('feedparser')
   , request = require('request')
   , config = require('./config')
   , xunlei = require('./xunlei')
-  , logger = require('./log');
 
 var list = config.getList();
 var url = config.getUrl();
@@ -17,7 +16,7 @@ module.exports.run = function(){
   request(url)
     .pipe(new FeedParser())
     .on('error', function(error) {
-      logger.log('error','Parse RSS error.');
+      console.error('Parse RSS error.');
     })
     .on('readable', function () {
       var stream = this, rssItem;
@@ -47,14 +46,14 @@ module.exports.run = function(){
               }
             })
             if(newer){
-              logger.log('info','New! - ' + title);
+              console.log('New! - ' + title);
               var promise = xunlei.add(rssItem.enclosures[0].url)
               promise.then(function(json){
-                logger.log("info","Successfully added xunlei-lixian task: " + json.tasks[0].name);
+                console.log("Successfully added xunlei-lixian task: " + json.tasks[0].name);
                 config.updateItem(itemIndex,episode);
                 list = config.getList();
               }, function(err){
-                logger.log("error","Add xunlei-lixian task failed.\ninfo:","Error Message: " + err.stdout);
+                console.error("Add xunlei-lixian task failed.\ninfo:","Error Message: " + err.stdout);
               })
             }
           }
